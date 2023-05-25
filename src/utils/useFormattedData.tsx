@@ -69,8 +69,6 @@ const useFormattedData = (data: Array<User>) => {
     return searchHandler(filteredUsers, searchValue);
   }, [filteredUsers, searchValue]);
 
-  console.log(usersBySearch);
-
   const sortedUsers = useMemo(() => {
     return typeof sortByValue === 'string'
       ? sortByHandler(usersBySearch, sortByValue)
